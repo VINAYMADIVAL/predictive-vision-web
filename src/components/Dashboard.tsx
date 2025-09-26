@@ -10,6 +10,8 @@ import {
   DollarSign
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DemandForecastChart from "@/components/charts/DemandForecastChart";
+import InventoryChart from "@/components/charts/InventoryChart";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -144,48 +146,17 @@ const Dashboard = () => {
 
           {/* Charts Section */}
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            {/* Demand Forecast Chart */}
+            {/* Advanced Demand Forecast Chart */}
             <div className="bg-card-glass border border-border/50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-foreground mb-4">Demand Forecasting Accuracy</h4>
-              <div className="space-y-4">
-                {demandData.map((data, index) => (
-                  <div key={index} className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground w-12">{data.month}</span>
-                    <div className="flex-1 mx-4">
-                      <div className="flex space-x-2">
-                        <div className="flex-1 bg-muted/30 rounded-full h-2">
-                          <div 
-                            className="bg-primary rounded-full h-2 transition-all duration-500"
-                            style={{ width: `${data.predicted}%` }}
-                          />
-                        </div>
-                        <div className="flex-1 bg-muted/30 rounded-full h-2">
-                          <div 
-                            className="bg-accent rounded-full h-2 transition-all duration-500"
-                            style={{ width: `${data.actual}%` }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-sm text-foreground w-16 text-right">
-                      {Math.abs(data.predicted - data.actual) < 5 ? (
-                        <CheckCircle className="w-4 h-4 text-success inline" />
-                      ) : (
-                        <span className="text-muted-foreground">±{Math.abs(data.predicted - data.actual)}%</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="text-lg font-semibold text-foreground">Demand Forecasting Analysis</h4>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <TrendingUp className="w-4 h-4 text-success" />
+                  <span>94.2% Accuracy</span>
+                </div>
               </div>
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/50">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-primary rounded-full" />
-                  <span className="text-xs text-muted-foreground">Predicted</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-accent rounded-full" />
-                  <span className="text-xs text-muted-foreground">Actual</span>
-                </div>
+              <div className="h-[300px]">
+                <DemandForecastChart data={demandData} type="line" />
               </div>
             </div>
 
