@@ -43,10 +43,20 @@ const Hero = () => {
             with AI
           </h1>
 
-          <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Predict materials demand with 94% accuracy using advanced machine learning. 
-            Optimize procurement, reduce inventory costs, and eliminate stockouts.
-          </p>
+          <div className="mb-8">
+            <p className="text-lg sm:text-xl text-accent font-medium mb-4">
+              AI-powered demand forecasting for POWERGRID projects — Prototype built under SIH 2025.
+            </p>
+            
+            <p className="text-xl sm:text-2xl text-white/80 mb-4 max-w-4xl mx-auto leading-relaxed">
+              Predict materials demand with 94% accuracy using advanced machine learning. 
+              Optimize procurement, reduce inventory costs, and eliminate stockouts.
+            </p>
+            
+            <p className="text-lg text-white/70 max-w-3xl mx-auto">
+              Here's why this matters for POWERGRID…
+            </p>
+          </div>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -64,13 +74,23 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button variant="hero" size="xl" className="group">
-              Start Free Trial
+              Explore Prototype Dashboard
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="glass" size="xl" className="group">
               <Play className="w-5 h-5 mr-2" />
-              Watch Demo
+              View Demo
             </Button>
+          </div>
+          
+          {/* SIH 2025 Badge */}
+          <div className="flex justify-center mb-16">
+            <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3">
+              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xs">SIH</span>
+              </div>
+              <span className="text-white/90 text-sm font-medium">Built under SIH 2025 — Open to POWERGRID feedback</span>
+            </div>
           </div>
 
           {/* Stats */}

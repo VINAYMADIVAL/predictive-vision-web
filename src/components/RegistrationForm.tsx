@@ -58,15 +58,16 @@ const RegistrationForm = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 bg-secondary/10 backdrop-blur-sm border border-secondary/20 rounded-full px-4 py-2 mb-6">
-            <Building className="w-4 h-4 text-secondary" />
-            <span className="text-sm text-secondary">Enterprise Registration</span>
+          <div className="inline-flex items-center space-x-2 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 mb-6">
+            <Building className="w-4 h-4 text-accent" />
+            <span className="text-sm text-accent">Collaboration Opportunity</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gradient mb-6">
-            Start Your AI Journey Today
+            Connect with Our Team
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join 500+ enterprises transforming their supply chains with our AI-powered platform.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Interested in exploring this prototype further? Connect with our development team 
+            for collaboration opportunities and technical discussions.
           </p>
         </div>
 
@@ -277,7 +278,7 @@ const RegistrationForm = () => {
                 Thank you for your interest. Our team will contact you within 24 hours to schedule your personalized demo.
               </p>
               <Button variant="cta" size="lg">
-                Access Dashboard
+                Explore Prototype Dashboard
               </Button>
             </div>
           )}
@@ -295,7 +296,7 @@ const RegistrationForm = () => {
               
               {step === 3 ? (
                 <Button variant="cta" onClick={handleSubmit}>
-                  Complete Registration
+                  Contact Our Team
                 </Button>
               ) : (
                 <Button variant="default" onClick={handleNext}>

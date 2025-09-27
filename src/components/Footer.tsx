@@ -181,19 +181,28 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Disclaimer Banner */}
+        <div className="py-8 border-t border-border/50">
+          <div className="mb-8 p-4 bg-warning/10 border border-warning/20 rounded-lg text-center max-w-4xl mx-auto">
+            <p className="text-warning font-medium mb-2">⚠️ Prototype Disclaimer</p>
+            <p className="text-muted-foreground text-sm">
+              This is a prototype built for SIH 2025. Results shown are based on limited data and are for demonstration purposes only.
+            </p>
+          </div>
+        </div>
+
         {/* Bottom */}
         <div className="py-6 border-t border-border/50">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 SupplyForecasterAI. All rights reserved.
+              © 2024 ForecastAI - SIH 2025 Prototype. Built for POWERGRID Corporation collaboration.
             </p>
             <div className="flex items-center space-x-6 text-xs text-muted-foreground">
               <span className="flex items-center space-x-1">
-                <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-                <span>System Status: Operational</span>
+                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                <span>Prototype Status: Active</span>
               </span>
-              <span>SOC 2 Compliant</span>
-              <span>ISO 27001 Certified</span>
+              <span>Open to feedback</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Check, Star, Zap, Building, Crown } from "lucide-react";
+import { Check, Star, Zap, Building, Crown, DollarSign, ArrowRight, HelpCircle, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Pricing = () => {
@@ -83,16 +83,19 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 mb-6">
-            <Star className="w-4 h-4 text-accent" />
-            <span className="text-sm text-accent">Transparent Pricing</span>
+          <div className="inline-flex items-center space-x-2 bg-secondary/10 backdrop-blur-sm border border-secondary/20 rounded-full px-4 py-2 mb-6">
+            <Rocket className="w-4 h-4 text-secondary" />
+            <span className="text-sm text-secondary">Future Vision</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gradient mb-6">
-            Choose Your Success Plan
+            Future Commercialization
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Scale your supply chain intelligence with flexible pricing that grows with your business.
-            All plans include free setup and migration.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-4">
+            These features represent the SaaS vision of this product once matured, beyond the current SIH prototype.
+          </p>
+          <p className="text-lg text-muted-foreground/80 max-w-3xl mx-auto">
+            Post-prototype development could include enterprise licensing, multi-tenant deployment, 
+            and advanced analytics for various infrastructure organizations.
           </p>
         </div>
 
@@ -129,11 +132,12 @@ const Pricing = () => {
               </div>
 
               <Button 
-                variant={plan.popular ? "cta" : "default"} 
+                variant="outline"
                 size="lg" 
-                className="w-full mb-8"
+                className="w-full mb-8 opacity-60 cursor-not-allowed"
+                disabled
               >
-                {plan.cta}
+                Future Release
               </Button>
 
               <ul className="space-y-4">
