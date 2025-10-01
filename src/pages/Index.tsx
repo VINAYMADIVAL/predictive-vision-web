@@ -11,8 +11,8 @@ import DeploymentSecurity from "@/components/DeploymentSecurity";
 import Features from "@/components/Features";
 import Dashboard from "@/components/Dashboard";
 import AnalyticsDashboard from "@/components/analytics/AnalyticsDashboard";
-import Pricing from "@/components/Pricing";
-import RegistrationForm from "@/components/RegistrationForm";
+import FutureScope from "@/components/FutureScope";
+import ContactTeam from "@/components/ContactTeam";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -34,14 +34,14 @@ const Index = () => {
       <NationalImpact />
       <DeploymentSecurity />
       
-      {/* Original SaaS Features - Reframed */}
+      {/* Core Features & Analytics */}
       <Features />
       <Dashboard />
       <AnalyticsDashboard />
-      <Pricing />
       
-      {/* Contact/Registration */}
-      <RegistrationForm />
+      {/* Future Scope & Contact */}
+      <FutureScope />
+      <ContactTeam />
       
       {/* Footer */}
       <Footer />

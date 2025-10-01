@@ -7,7 +7,7 @@ const Hero = () => {
     { value: "94%", label: "Accuracy in Demand Prediction" },
     { value: "60%", label: "Reduction in Inventory Costs" },
     { value: "2.5x", label: "Faster Procurement Cycles" },
-    { value: "500+", label: "Enterprise Customers" },
+    { value: "SIH 2025", label: "Prototype Development" },
   ];
 
   const features = [
