@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import predictorLogo from "@/assets/predicto-logo.png";
@@ -42,8 +43,8 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Contact Team
+            <Button variant="default" size="sm" asChild>
+              <Link to="/login">Login</Link>
             </Button>
           </div>
 
@@ -76,8 +77,8 @@ const Navigation = () => {
               </a>
             ))}
             <div className="pt-4 space-y-2">
-              <Button variant="ghost" size="sm" className="w-full">
-                Contact Team
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <Link to="/login">Login</Link>
               </Button>
             </div>
           </div>
